@@ -24,8 +24,8 @@ export const Button: React.FC<ButtonProps> = ({
   isOutline = false,
   shape = "default",
   isLoading = false,
-  loadingType = "spinner",
-  loadingText = "در حال ارسال درخواست",
+  //   loadingType = "spinner",
+  //   loadingText = "در حال ارسال درخواست",
   type = "button",
   isLink = false,
   children,
@@ -48,6 +48,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button type={type} disabled={isDisabled} className={classes} {...rest}>
       {/* {isLoading ? loadingText : children} */}
+      {children}
     </button>
   );
 };

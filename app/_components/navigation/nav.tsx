@@ -3,8 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { FaBurger } from "react-icons/fa6";
 import { NavItem } from "./navItem";
-import { usePathname } from "next/navigation";
-import { Cart } from "./cart";
 import { FiMenu } from "react-icons/fi";
 import { Button } from "../button";
 import { MobileNav } from "./mobileNav";
