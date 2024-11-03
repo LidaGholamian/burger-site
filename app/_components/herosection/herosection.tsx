@@ -40,7 +40,7 @@ export const HeroSection: React.FC = () => {
     >
       {/* 1st hero slide */}
       <div className="w-[100%] h-[80vh] flex items-center justify-center bg-warning md:clip_path lg:clip_path sm:clip_path">
-        <div className="w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center items-center gap-5 mx-auto">
+        <div className="w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-2 justify-center items-center gap-5 mx-auto">
           <figure className="w-full">
             <Image
               src="/images/b1.png"
@@ -50,10 +50,12 @@ export const HeroSection: React.FC = () => {
               className="w-[1000px] h-auto"
             />
           </figure>
-          <div className="flex flex-col justify-start gap-2">
-            <div className="w-[250px] flex flex-col justify-start gap-2">
-              <p className="text-5xl font-bold text-white">Tasty Burger</p>
-              <p className="text-7xl font-bold text-accent uppercase">
+          <div className="flex flex-col justify-start gap-4">
+            <div className="w-[250px] flex flex-col justify-start gap-4">
+              <p className="text-5xl font-bold text-white sm:text-3xl">
+                Tasty Burger
+              </p>
+              <p className="text-7xl font-bold text-accent uppercase sm:text-5xl">
                 Top Burgers
               </p>
             </div>
@@ -76,7 +78,7 @@ export const HeroSection: React.FC = () => {
         </div>
       </div>
       <div className="w-[100%] h-[80vh] flex items-center justify-center bg-error md:clip_path lg:clip_path sm:clip_path">
-        <div className="w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center items-center gap-5 mx-auto pt-8">
+        <div className="w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-2 justify-center items-center gap-5 mx-auto">
           <figure className="w-full">
             <Image
               src="/images/b2.png"
@@ -86,10 +88,12 @@ export const HeroSection: React.FC = () => {
               className="w-[1000px] h-auto"
             />
           </figure>
-          <div className="flex flex-col justify-start gap-2">
-            <div className="w-[250px] flex flex-col justify-start gap-2">
-              <p className="text-5xl font-bold text-white">Fast Food Burger</p>
-              <p className="text-7xl font-bold text-warning uppercase">
+          <div className="flex flex-col justify-start gap-4">
+            <div className="w-[250px] flex flex-col justify-start gap-4">
+              <p className="text-5xl font-bold text-white sm:text-3xl">
+                Fast Food Burger
+              </p>
+              <p className="text-7xl font-bold text-warning uppercase sm:text-5xl">
                 Best Burgers
               </p>
             </div>
@@ -109,14 +113,6 @@ export const HeroSection: React.FC = () => {
               سفارش دهید
             </Button>
           </div>
-          <Button
-            variant="warning"
-            size="tiny"
-            className="text-xs lg:text-xs md:text-xs"
-          >
-            <BiCycling className="text-2xl lg:text-sm md:text-sm" />
-            سفارش دهید
-          </Button>
         </div>
       </div>
     </Carousel>
