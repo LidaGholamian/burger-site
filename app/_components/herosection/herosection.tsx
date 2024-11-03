@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { SlideType } from "../types/slide.type";
-import { SlidDetails } from "../slid";
+import { Button } from "../button";
+import { BiCycling } from "react-icons/bi";
 
 const responsive = {
   desktop: {
@@ -63,6 +63,15 @@ export const HeroSection: React.FC = () => {
               a typeface without relying on meaningful content. Lorem ipsum may
               be used as a placeholder before the final copy is available
             </p>
+            <Button
+              dir="rtl"
+              variant="accent"
+              size="small"
+              className="text-xs lg:text-xs md:text-xs w-[120px]"
+            >
+              <BiCycling className="text-2xl lg:text-sm md:text-sm" />
+              سفارش دهید
+            </Button>
           </div>
         </div>
       </div>
@@ -90,7 +99,24 @@ export const HeroSection: React.FC = () => {
               a typeface without relying on meaningful content. Lorem ipsum may
               be used as a placeholder before the final copy is available
             </p>
+            <Button
+              dir="rtl"
+              variant="accent"
+              size="small"
+              className="text-xs lg:text-xs md:text-xs w-[120px]"
+            >
+              <BiCycling className="text-2xl lg:text-sm md:text-sm" />
+              سفارش دهید
+            </Button>
           </div>
+          <Button
+            variant="warning"
+            size="tiny"
+            className="text-xs lg:text-xs md:text-xs"
+          >
+            <BiCycling className="text-2xl lg:text-sm md:text-sm" />
+            سفارش دهید
+          </Button>
         </div>
       </div>
     </Carousel>

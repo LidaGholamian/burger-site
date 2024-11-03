@@ -2,7 +2,6 @@
 
 import { NavigationMenuItems } from "@/app/types/navigation-menu-items";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
@@ -24,7 +23,6 @@ const menuItems: NavigationMenuItems[] = [
 ];
 
 export function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
-  const pathName = usePathname();
   return (
     <div className="fixed justify-start right-0 top-0 h-full w-full min-h-screen bg-grey/80 md:hidden lg:hidden">
       {/* nav div */}
