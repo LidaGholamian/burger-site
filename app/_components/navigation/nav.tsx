@@ -12,6 +12,31 @@ export const Nav: React.FC = () => {
   const [sideMenuOpen, setSideMenu] = useState(false);
   const [animationParent] = useAutoAnimate();
 
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Scrolling down and past a certain point (e.g., 100px)
+      setIsVisible(false);
+    } else {
+      // Scrolling up
+      setIsVisible(true);
+    }
+
+    setLastScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   useEffect(() => {
     if (sideMenuOpen) {
       // Disable background scrolling
@@ -35,7 +60,11 @@ export const Nav: React.FC = () => {
     setSideMenu(false);
   }
   return (
-    <div className="h-[12vh] bg-white">
+    <div
+      className={`h-[12vh] bg-white sticky top-0 z-50 transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div
         ref={animationParent}
         className="sm:w-[90%] w-[95%] mx-auto flex h-[100%] items-center justify-between"
