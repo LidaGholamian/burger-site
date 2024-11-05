@@ -24,6 +24,7 @@ export const tailwindColors: {[key: string]: string} = {
     "accent-content": "#FFFFFF",
     "accent-focus": generateDarkenColorFrom("#1FB2A5"),
     grey: "#808080",
+    "grey-content": "#D3D3D3",
     neutral: "#2a323c",
     "neutral-content": generateForegroundColorFrom("#FFFFFF"),
     "neutral-focus": generateDarkenColorFrom("#2a323c", 0.03),

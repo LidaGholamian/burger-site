@@ -30,3 +30,8 @@
     clip-path: polygon(50% 0%, 100% 0, 100% 91%, 50% 100%, 0 91%, 0% 60%, 0 0);
   }
 }
+@layer components {
+  .heading {
+    @apply text-[30px] md:text-[35px] lg:text-[45px] xl:text-[45px] uppercase font-bold text-center;
+  }
+}
