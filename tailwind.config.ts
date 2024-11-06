@@ -45,6 +45,8 @@ export const tailwindColors: {[key: string]: string} = {
     "error-content": generateForegroundColorFrom("#f87272"),
     "gradient-first": "#34eaa0",
     "gradient-second": "#0fa2e9",
+    cream: "#fdf8ed",
+    coffee: "#b8b17b"
 }
 
 const config: Config = {

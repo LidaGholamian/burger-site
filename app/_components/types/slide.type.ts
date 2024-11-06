@@ -1,6 +1,6 @@
 export type SlideType={
     image: string,
-    desc: string,
+    desc?: string,
     title: string,
     note?: string
 }

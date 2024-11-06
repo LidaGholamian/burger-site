@@ -12,23 +12,23 @@ import { SlidDetails } from "./slide-details";
 
 const data: SlideType[] = [
   {
-    title: "Tasty Burger",
+    title: "برگــرهای خوشمزه",
     image: "/images/b1.png",
-    note: "Top Burgers",
-    desc: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available",
+    note: "بهترین برگرها",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه",
   },
   {
-    title: "Fast Food Burger",
+    title: "کیفیت بالا",
     image: "/images/b2.png",
-    note: "Best Burgers",
-    desc: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available",
+    note: "طعم لذیذ",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه",
   },
 ];
 
 export const Slider: React.FC = () => {
   return (
     <Swiper
-      className="container flex justify-center items-center bg-error w-[400px] md:w-[100%] lg:w-[100%] sm:w-[100%] md:clip_path lg:clip_path xl:clip_path"
+      className="container flex justify-center items-center bg-coffee h-[100vh] w-[400px] md:w-[100%] lg:w-[100%] sm:w-[100%] md:clip_path lg:clip_path xl:clip_path pb-10"
       pagination={{
         dynamicBullets: true,
         clickable: true,
@@ -46,7 +46,7 @@ export const Slider: React.FC = () => {
       }}
       modules={[Autoplay, Pagination]}
     >
-      <div className="flex justify-center items-center gap-5 ">
+      <div className="flex justify-center items-center">
         {data.map((d, i) => (
           <SwiperSlide key={i}>
             <SlidDetails
