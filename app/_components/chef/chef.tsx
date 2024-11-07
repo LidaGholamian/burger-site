@@ -50,7 +50,7 @@ export const Chef: React.FC = () => {
   return (
     <ul
       ref={listRef}
-      className="flex flex-col mx-auto md:flex-row lg:flex-row xl:flex-row justify-center items-center gap-10 rounded-xl mb-5 mt-5 w-[80%]"
+      className="flex flex-col mx-auto md:flex-row lg:flex-row xl:flex-row justify-center items-center gap-10 rounded-xl mb-32 mt-5 w-[80%]"
     >
       {chef.map((ch, i) => (
         <li
