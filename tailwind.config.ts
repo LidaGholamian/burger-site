@@ -46,7 +46,8 @@ export const tailwindColors: {[key: string]: string} = {
     "gradient-first": "#34eaa0",
     "gradient-second": "#0fa2e9",
     cream: "#fdf8ed",
-    coffee: "#b8b17b"
+    coffee: "#b8b17b",
+    Burgundy: "#800020"
 }
 
 const config: Config = {
