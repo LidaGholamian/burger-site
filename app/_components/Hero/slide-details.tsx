@@ -1,14 +1,7 @@
 import Image from "next/image";
 import { SlideType } from "../types/slide.type";
-import { Button } from "../button";
-import { BiCycling } from "react-icons/bi";
 
-export const SlidDetails: React.FC<SlideType> = ({
-  image,
-  title,
-  note,
-  desc,
-}) => {
+export const SlidDetails: React.FC<SlideType> = ({ image, title, note }) => {
   return (
     <div className="flex justify-center items-center mx-auto gap-10 w-[100%] xl:gap-14 md:pl-14 lg:pl-14 xl:pl-14 md:pb-24 lg:pb-24 xl:pb-24 pt-5">
       <figure>

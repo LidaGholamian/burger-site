@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { SlideType } from "../types/slide.type";
-import Image from "next/image";
 import { CardDetails } from "./card-details";
 
 const card: SlideType[] = [
