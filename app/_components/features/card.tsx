@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SlideType } from "../types/slide.type";
 import Image from "next/image";
 import { CardDetails } from "./card-details";
@@ -23,14 +23,32 @@ const card: SlideType[] = [
 ];
 
 export const Card: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const listRef = useRef<HTMLUListElement | null>(null);
 
   useEffect(() => {
-    // Set isLoaded to true when the component mounts
-    setIsLoaded(true);
+    // Create an intersection observer to observe the list element
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true); // Set isVisible to true when the element comes into view
+            observer.disconnect(); // Stop observing after the first intersection
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the component is in view
+    );
+
+    if (listRef.current) {
+      observer.observe(listRef.current);
+    }
+
+    return () => observer.disconnect(); // Clean up observer on unmount
   }, []);
 
   return (
+    // without map function
     // <ul
     //   className={`flex flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center gap-10 w-full transform transition-transform duration-700 ${
     //     isLoaded ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"
@@ -106,14 +124,19 @@ export const Card: React.FC = () => {
     //     </li>
     //   ))} */}
     // </ul>
-    <ul className="flex flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center gap-10 w-full">
+    <ul
+      ref={listRef}
+      className="flex flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center gap-10 w-full"
+    >
       {card.map((c, i) => (
         <li
           key={i}
           className={`w-full flex justify-center items-center transform transition-transform duration-700 ${
-            isLoaded ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"
+            isVisible
+              ? "translate-x-0 opacity-100"
+              : "-translate-x-full opacity-0"
           }`}
-          style={{ transitionDelay: `${i * 200}ms` }}
+          style={{ transitionDelay: `${i * 200}ms` }} // Delay for effect
         >
           <CardDetails title={c.title} image={c.image} desc={c.desc} />
         </li>

@@ -1,3 +1,5 @@
+import { Chef } from "./_components/chef";
+import { Delivery } from "./_components/delivery/delivery";
 import { Features } from "./_components/features";
 import { Slider } from "./_components/Hero/slider";
 import { PopularBurgers } from "./_components/popular-burgers";
@@ -8,6 +10,8 @@ export default function Home() {
       <Slider />
       <Features />
       <PopularBurgers />
+      <Delivery />
+      <Chef />
     </div>
   );
 }

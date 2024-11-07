@@ -28,7 +28,7 @@ const data: SlideType[] = [
 export const Slider: React.FC = () => {
   return (
     <Swiper
-      className="container flex justify-center items-center bg-coffee h-[100vh] w-[400px] md:w-[100%] lg:w-[100%] sm:w-[100%] md:clip_path lg:clip_path xl:clip_path pb-10"
+      className="container flex justify-center items-center bg-coffee md:h-[100vh] lg:h-[100vh] xl:h-[100vh] w-[400px] md:w-[100%] lg:w-[100%] sm:w-[100%] md:clip_path lg:clip_path xl:clip_path pb-10"
       pagination={{
         dynamicBullets: true,
         clickable: true,
