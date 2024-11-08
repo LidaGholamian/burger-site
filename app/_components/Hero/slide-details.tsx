@@ -10,10 +10,10 @@ export const SlidDetails: React.FC<SlideType> = ({ image, title, note }) => {
           width={1000}
           height={1000}
           alt="slider-pics"
-          className="w-[1000px] h-auto pr-5"
+          className="w-[1000px] md:w-[1000px] lg:w-[1000px] xl:w-[1000px] h-auto pr-5"
         />
       </figure>
-      <div className="flex flex-col justify-center items-start gap-5 w-[50%] md:w-[65%] lg:w-[65%] xl:w-[65%] text-white pr-10">
+      <div className="flex flex-col justify-center items-start gap-5 w-[50%] md:w-[55%] lg:w-[65%] xl:w-[65%] text-white pr-10">
         <div className="w-[400px] flex flex-col justify-start items-start gap-4">
           <p className=" md:text-5xl lg:text-5xl xl:text-5xl font-bold ">
             {title}

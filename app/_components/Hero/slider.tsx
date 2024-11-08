@@ -28,13 +28,13 @@ const data: SlideType[] = [
 export const Slider: React.FC = () => {
   return (
     <Swiper
-      className="container flex justify-center items-center bg-Burgundy md:h-[100vh] lg:h-[100vh] xl:h-[100vh] w-[400px] md:w-[100%] lg:w-[100%] sm:w-[100%] md:clip_path lg:clip_path xl:clip_path pb-10"
+      className="container flex justify-center items-center bg-Burgundy md:h-[50vh] lg:h-[80vh] xl:h-[100vh] w-[400px] md:w-[100%] lg:w-[100%] sm:w-[100%] md:clip_path lg:clip_path xl:clip_path pb-10"
       pagination={{
         dynamicBullets: true,
         clickable: true,
       }}
       autoplay={{
-        delay: 4000, // Delay between transitions in milliseconds (default: 3000)
+        delay: 4000, // Delay between transitions in milliseconds
         disableOnInteraction: false, // Autoplay will not be disabled after user interactions (default: true)
       }}
       breakpoints={{
