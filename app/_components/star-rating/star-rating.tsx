@@ -31,7 +31,7 @@ export const StarRating: React.FC<StarRatingProps> = ({ totalStars = 5 }) => {
             onMouseOver={() => handleMouseOver(starValue)}
             onMouseOut={handleMouseOut}
             xmlns="http://www.w3.org/2000/svg"
-            className={`h-5 w-5 transition-colors duration-200 ${
+            className={`h-4 w-4 transition-colors duration-200 ${
               starValue <= (hover || rating) ? "text-warning" : "text-warning"
             }`}
             fill="currentColor"

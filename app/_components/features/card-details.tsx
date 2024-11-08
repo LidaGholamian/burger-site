@@ -14,8 +14,10 @@ export const CardDetails: React.FC<SlideType> = ({ title, image, desc }) => {
         />
       </figure>
       <div className="flex flex-col justify-center items-center gap-2">
-        <h2 className="font-bold text-lg">{title}</h2>
-        <p className="text-grey">{desc}</p>
+        <h2 className="font-bold md:text-lg lg:text-lg xl:text-lg">{title}</h2>
+        <p className="text-grey text-sm md:text-sm lg:text-sm xl:text-sm">
+          {desc}
+        </p>
       </div>
     </div>
   );

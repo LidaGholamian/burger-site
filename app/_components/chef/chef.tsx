@@ -58,7 +58,7 @@ export const Chef: React.FC = () => {
           className={`w-full flex justify-center items-center transform transition-transform duration-700 ${
             isVisible
               ? "translate-y-0 opacity-100"
-              : "-translate-y-40 opacity-0"
+              : "-translate-y-20 opacity-0"
           }`}
           style={{ transitionDelay: `${i * 200}ms` }} // Delay for effect
         >

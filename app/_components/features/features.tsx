@@ -8,7 +8,7 @@ export const Features: React.FC = () => {
         بهتــرین طعـم برگر را با ما تجربه کنید
       </h1>
       {/* cards */}
-      <div className="w-[90%] md:w-[80%] mb-5 mx-auto flex items-center gap-12">
+      <div className="w-[80%] mb-5 mx-auto flex items-center gap-12">
         <Card />
       </div>
     </div>

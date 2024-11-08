@@ -23,14 +23,14 @@ export const BurgerDetails: React.FC<BurgerType> = ({
         />
       </figure>
       <div className="flex flex-col justify-center items-center gap-2">
-        <p className="font-bold text-lg">{title}</p>
+        <p className="font-bold md:text-lg lg:text-lg xl:text-lg">{title}</p>
         <StarRating totalStars={5} />
         <p className="text-grey text-sm pr-3 pl-2">{desc}</p>
         <div className="flex justify-between w-full md:pr-3 md:pl-3 md:pb-3 items-center">
           <Button variant="accent" size="tiny">
             <FaShoppingBag className="text-sm" />
           </Button>
-          <p className="text-warning font-semibold">{price} تومان</p>
+          <p className="text-warning text-sm font-semibold">{price} تومان</p>
         </div>
       </div>
     </div>
